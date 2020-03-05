@@ -45,7 +45,7 @@ def fetch_data(oldata):
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/668120613101240350/IMG_20200109_213228.jpg")
                 embed.set_image(url="https://cdn.discordapp.com/attachments/612849803352604673/666201723341373462/barrr.gif")
                 embed.set_footer(text=f"DayNiteツWORLD V2.0",\
-                icon_url="https://cdn.discordapp.com/attachments/661100024452743178/682486812404350976/JPEG_20200222_184202.jpg")
+                icon_url="https://cdn.discordapp.com/attachments/669836767456788491/680458386063753267/IMG_20200221_222630.jpg")
                 hook.send("@everyone",embed=embed)
             elif data["type"] == "Question":
                 question = data["q"]
@@ -55,7 +55,7 @@ def fetch_data(oldata):
                 embed.add_field(name="**__OPTIONS__**", value=f"1. {options[0]}\n2. {options[1]}\n3. {options[2]}")
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/682474021912182795/images_22.jpeg")
                 embed.set_footer(text=f"DayNiteツWORLD V2.0",\
-                icon_url="https://cdn.discordapp.com/attachments/661100024452743178/682486812404350976/JPEG_20200222_184202.jpg")
+                icon_url="https://cdn.discordapp.com/attachments/669836767456788491/680458386063753267/IMG_20200221_222630.jpg")
                 hook.send(embed=embed) 
                 hook.send("!")
             elif data["type"] == "QuestionSummary":
@@ -64,13 +64,13 @@ def fetch_data(oldata):
                 embed.add_field(name="<:right:670810748804399105> **__Correct Answer__**", value=correct)
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/682474021912182795/images_22.jpeg")
                 embed.set_footer(text=f"DayNiteツWORLD V2.0",\
-                icon_url="https://cdn.discordapp.com/attachments/661100024452743178/682486812404350976/JPEG_20200222_184202.jpg")
+                icon_url="https://cdn.discordapp.com/attachments/669836767456788491/680458386063753267/IMG_20200221_222630.jpg")
                 hook.send(embed=embed)
                 
             elif data["type"] == "GameSummary":
                 number_of_winners = data["winners"]
                 payout = data["payout"]
-                embed = Embed(title="**__TRIVIA NATION | PRO™__**", description=f"Game Summary ",color=0xFA58AC)
+                embed = Embed(title="**__DayNiteツWORLD V2.0__**", description=f"Game Summary ",color=0xFA58AC)
                 embed.add_field(name="**__Crowd Accuracy__**", value="**10/10**")              
                 embed.add_field(name="**__Total Winners__**", value=number_of_winners)               
                 embed.add_field(name="**__Game Payout__** ", value="**₹**"+str(payout)) 
@@ -78,7 +78,7 @@ def fetch_data(oldata):
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/682474021912182795/images_22.jpeg")
                 embed.set_image(url="https://cdn.discordapp.com/attachments/612849803352604673/666201723341373462/barrr.gif")
                 embed.set_footer(text=f"DayNiteツWORLD V2.0",\
-                icon_url="https://cdn.discordapp.com/attachments/661100024452743178/682486812404350976/JPEG_20200222_184202.jpg")
+                icon_url="https://cdn.discordapp.com/attachments/669836767456788491/680458386063753267/IMG_20200221_222630.jpg")
 
                 hook.send(embed=embed)                
                 break
@@ -97,5 +97,5 @@ while True:
         print("Game is Live")
         fetch_data(oldata)
     print("Game not live sleeping for 5 min!")
-    hook.send("connected")
+   
     time.sleep(300)    
