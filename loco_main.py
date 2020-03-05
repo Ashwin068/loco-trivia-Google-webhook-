@@ -39,7 +39,7 @@ def fetch_data(oldata):
            # print(data)
             if data["type"] == "starting":
                 print('Game is Starting within 5m!')
-                embed = Embed(title="**__READY TO WIN LOCO TRIVIA__**", description="**`GAME STARTS WITHIN 5 MINUTES`**", color=0x58B3F7)
+                embed = Embed(title="**__READY TO WIN LOCO TRIVIA__**", description="**`GAME STARTS WITHIN 5 MINUTES`**", color=0x1B7EDB)
                 embed.add_field(name="<:right:670810748804399105>**__BOT STATUS__**<:right:670810748804399105>", value="**Online**  :red_circle:  **`Auto Run Bot`**")
                 embed.add_field(name="**__FAST GUYS & ALSO REACT HERE__**", value="```✴️✴️✴️    💸💸💸💸    ✴️✴️✴️```")
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/668120613101240350/IMG_20200109_213228.jpg")
@@ -51,7 +51,7 @@ def fetch_data(oldata):
                 question = data["q"]
                 question_no = data["qnum"]
                 options = [data["o1"],data["o2"],data["o3"]]
-                embed = Embed(title=f"Q{str(question_no)} out of 10", description=question,color=0x58B3F7)
+                embed = Embed(title=f"Q{str(question_no)} out of 10", description=question,color=0x1B7EDB)
                 embed.add_field(name="**__OPTIONS__**", value=f"1. {options[0]}\n2. {options[1]}\n3. {options[2]}")
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/682474021912182795/images_22.jpeg")
                 embed.set_footer(text=f"DayNiteツWORLD V2.0",\
@@ -60,7 +60,7 @@ def fetch_data(oldata):
                 hook.send("!")
             elif data["type"] == "QuestionSummary":
                 correct = data["correct"]
-                embed = Embed(title="**LOCO TRIVIA**", description="Question Summary",color=0x58B3F7)
+                embed = Embed(title="**LOCO TRIVIA**", description="Question Summary",color=0x1B7EDB)
                 embed.add_field(name="<:right:670810748804399105> **__Correct Answer__**", value=correct)
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/682474021912182795/images_22.jpeg")
                 embed.set_footer(text=f"DayNiteツWORLD V2.0",\
@@ -70,7 +70,7 @@ def fetch_data(oldata):
             elif data["type"] == "GameSummary":
                 number_of_winners = data["winners"]
                 payout = data["payout"]
-                embed = Embed(title="**__DayNiteツWORLD V2.0__**", description=f"Game Summary ",color=0xFA58AC)
+                embed = Embed(title="**__DayNiteツWORLD V2.0__**", description=f"Game Summary ",color=0x1B7EDB)
                 embed.add_field(name="**__Crowd Accuracy__**", value="**10/10**")              
                 embed.add_field(name="**__Total Winners__**", value=number_of_winners)               
                 embed.add_field(name="**__Game Payout__** ", value="**₹**"+str(payout)) 
