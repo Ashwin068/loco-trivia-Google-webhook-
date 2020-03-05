@@ -13,7 +13,7 @@ oldata = None
 
 # input all datas
 loco_bearer_token = "oAQ0BjrWzVQqJ5kM7PNQQnvq9coOq1"
-webhook_url = "https://discordapp.com/api/webhooks/663377658180141086/Lbdqh_E2Tm0dSs7Lp_gstIznxCEPQahDiqqp-GW5iR-5PSjnkCc34zhZcjTnVp4d1OGT"
+webhook_url = "https://discordapp.com/api/webhooks/685030804833042443/HX2CCvkKaB9vzBQh5EgWczcGokWZ3y1q0HN-xrZpYNzvB6HEYmjPGBlBXVoyYH0FXYgP"
 
 #############################
 
@@ -40,11 +40,11 @@ def fetch_data(oldata):
             if data["type"] == "starting":
                 print('Game is Starting within 5m!')
                 embed = Embed(title="**__READY TO WIN LOCO TRIVIA__**", description="**`GAME STARTS WITHIN 5 MINUTES`**", color=0x58B3F7)
-                embed.add_field(name="<a:emoji_22:668119034864336937>**__BOT STATUS__**<a:emoji_22:668119034864336937>", value="**Online**  :red_circle:  **`Auto Run Bot`**")
+                embed.add_field(name="<:right:670810748804399105>**__BOT STATUS__**<:right:670810748804399105>", value="**Online**  :red_circle:  **`Auto Run Bot`**")
                 embed.add_field(name="**__FAST GUYS & ALSO REACT HERE__**", value="```✴️✴️✴️    💸💸💸💸    ✴️✴️✴️```")
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/668120613101240350/IMG_20200109_213228.jpg")
                 embed.set_image(url="https://cdn.discordapp.com/attachments/612849803352604673/666201723341373462/barrr.gif")
-                embed.set_footer(text=f"Trivia Nation | Shivam々0001",\
+                embed.set_footer(text=f"DayNiteツWORLD V2.0",\
                 icon_url="https://cdn.discordapp.com/attachments/661100024452743178/682486812404350976/JPEG_20200222_184202.jpg")
                 hook.send("@everyone",embed=embed)
             elif data["type"] == "Question":
@@ -54,16 +54,16 @@ def fetch_data(oldata):
                 embed = Embed(title=f"Q{str(question_no)} out of 10", description=question,color=0x58B3F7)
                 embed.add_field(name="**__OPTIONS__**", value=f"1. {options[0]}\n2. {options[1]}\n3. {options[2]}")
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/682474021912182795/images_22.jpeg")
-                embed.set_footer(text=f"Trivia Nation | Shivam々0001™〢",\
+                embed.set_footer(text=f"DayNiteツWORLD V2.0",\
                 icon_url="https://cdn.discordapp.com/attachments/661100024452743178/682486812404350976/JPEG_20200222_184202.jpg")
                 hook.send(embed=embed) 
-                hook.send("-+lo")
+                hook.send("!")
             elif data["type"] == "QuestionSummary":
                 correct = data["correct"]
                 embed = Embed(title="**LOCO TRIVIA**", description="Question Summary",color=0x58B3F7)
-                embed.add_field(name="<a:ntsahi:658256244594704397> **__Correct Answer__**", value=correct)
+                embed.add_field(name="<:right:670810748804399105> **__Correct Answer__**", value=correct)
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/682474021912182795/images_22.jpeg")
-                embed.set_footer(text=f"Trivia Nation | Shivam々0001™〢",\
+                embed.set_footer(text=f"DayNiteツWORLD V2.0",\
                 icon_url="https://cdn.discordapp.com/attachments/661100024452743178/682486812404350976/JPEG_20200222_184202.jpg")
                 hook.send(embed=embed)
                 
@@ -73,11 +73,11 @@ def fetch_data(oldata):
                 embed = Embed(title="**__TRIVIA NATION | PRO™__**", description=f"Game Summary ",color=0xFA58AC)
                 embed.add_field(name="**__Crowd Accuracy__**", value="**10/10**")              
                 embed.add_field(name="**__Total Winners__**", value=number_of_winners)               
-                embed.add_field(name="**__Game Payout__** <:paytm:681408218299105280> ", value="**₹**"+str(payout)) 
-                embed.add_field(name="**__Post Winning Screenshot Here__**", value="<#657832721481072657>")
+                embed.add_field(name="**__Game Payout__** ", value="**₹**"+str(payout)) 
+                embed.add_field(name="**__Post Winning Screenshot Here__**", value="<#684289534112169984>")
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/682474021912182795/images_22.jpeg")
                 embed.set_image(url="https://cdn.discordapp.com/attachments/612849803352604673/666201723341373462/barrr.gif")
-                embed.set_footer(text=f"Trivia Nation | SHIVAM々0001™",\
+                embed.set_footer(text=f"DayNiteツWORLD V2.0",\
                 icon_url="https://cdn.discordapp.com/attachments/661100024452743178/682486812404350976/JPEG_20200222_184202.jpg")
 
                 hook.send(embed=embed)                
@@ -97,5 +97,5 @@ while True:
         print("Game is Live")
         fetch_data(oldata)
     print("Game not live sleeping for 5 min!")
-  
+    hook.send("connected")
     time.sleep(300)    
