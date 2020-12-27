@@ -12,8 +12,8 @@ oldata = None
 
 
 # input all datas
-loco_bearer_token = "oAQ0BjrWzVQqJ5kM7PNQQnvq9coOq1"
-webhook_url = "https://discordapp.com/api/webhooks/685030804833042443/HX2CCvkKaB9vzBQh5EgWczcGokWZ3y1q0HN-xrZpYNzvB6HEYmjPGBlBXVoyYH0FXYgP"
+loco_bearer_token = "put_loco_barear_token"
+webhook_url = "put_webhook_url"
 
 #############################
 
@@ -44,7 +44,7 @@ def fetch_data(oldata):
                 embed.add_field(name="**__FAST GUYS & ALSO REACT HERE__**", value="```✴️✴️✴️    💸💸💸💸    ✴️✴️✴️```")
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/668120613101240350/IMG_20200109_213228.jpg")
                 embed.set_image(url="https://cdn.discordapp.com/attachments/612849803352604673/666201723341373462/barrr.gif")
-                embed.set_footer(text=f"DayNiteツWORLD V2.0",\
+                embed.set_footer(text=f"created by Ashwin#6854",\
                 icon_url="https://cdn.discordapp.com/attachments/669836767456788491/680458386063753267/IMG_20200221_222630.jpg")
                 hook.send("@everyone",embed=embed)
             elif data["type"] == "Question":
@@ -54,7 +54,7 @@ def fetch_data(oldata):
                 embed = Embed(title=f"Q{str(question_no)} out of 10", description=question,color=0x1B7EDB)
                 embed.add_field(name="**__OPTIONS__**", value=f"1. {options[0]}\n2. {options[1]}\n3. {options[2]}")
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/682474021912182795/images_22.jpeg")
-                embed.set_footer(text=f"DayNiteツWORLD V2.0",\
+                embed.set_footer(text=f"created by Ashwin#6854",\
                 icon_url="https://cdn.discordapp.com/attachments/669836767456788491/680458386063753267/IMG_20200221_222630.jpg")
                 hook.send(embed=embed) 
                 hook.send("!")
@@ -77,7 +77,7 @@ def fetch_data(oldata):
                 embed.add_field(name="**__Post Winning Screenshot Here__**", value="<#684289534112169984>")
                 embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/661100024452743178/682474021912182795/images_22.jpeg")
                 embed.set_image(url="https://cdn.discordapp.com/attachments/612849803352604673/666201723341373462/barrr.gif")
-                embed.set_footer(text=f"DayNiteツWORLD V2.0",\
+                embed.set_footer(text=f"created by Ashwin#6854",\
                 icon_url="https://cdn.discordapp.com/attachments/669836767456788491/680458386063753267/IMG_20200221_222630.jpg")
 
                 hook.send(embed=embed)                
